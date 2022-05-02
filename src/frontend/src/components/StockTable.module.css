@@ -1,0 +1,80 @@
+.thumbnail {
+    flex: 1;
+    margin-right: 16px;
+}
+
+.name{
+    flex: 3;
+    text-align: left;
+}
+
+.price{
+    padding-top: 27px;
+    flex: 4;
+}
+
+.availability{
+    padding-top: 27px;
+}
+
+.header{
+    display: flex;
+    padding: 20px;
+}
+
+.availability{
+    flex: 4;
+
+}
+
+.buttons{
+    flex: 4;
+    background: white;
+    border: none;
+    font-weight: 500;
+    text-align: center;
+
+}
+
+.tableContainer {
+    position: static;
+    margin-top: 15px;
+}
+
+.inStock{
+   color: green;
+    text-decoration: none;
+}
+
+.outOfStock{
+    color: red;
+    text-decoration: none;
+}
+
+.downArrow{
+    max-width: 10%;
+    align-content: space-around;
+}
+
+.upArrow{
+    max-width: 10%;
+}
+
+.links{
+    text-decoration: none;
+}
+
+.nameContainer{
+
+    display: flex;
+    padding: 20px;
+
+    border-radius: 8px;
+    margin-bottom: 16px;
+    background-color: whitesmoke;
+
+    font-weight: 500;
+
+    transition: transform 200ms ease-in-out, box-shadow 200ms ease-in-out;
+
+}
