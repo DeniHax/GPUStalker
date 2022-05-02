@@ -1,7 +1,7 @@
 version: "3.8"
 services:
   backend:
-    image: "denihax/gpustalker:2.5.2022.21.29.52"
+    image: "denihax/gpustalker:2.5.2022.22.22.39"
     ports:
       - "80:8080"
     restart: "always"
