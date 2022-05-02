@@ -55,10 +55,10 @@ jobs:
       - name: Maven Clean Package
         run:
           mvn --no-transfer-progress clean package -D BESTBUY_API_KEY=${{ secrets.BESTBUY_API_KEY }} -D POSTGRES_PASSWORD=${{ env.POSTGRESQL_PASSWORD }} -P build-frontend \
-            -P jib-push-to-dockerhub\
-              -Dapp.image.tag=${{steps.build-number.outputs.BUILD_NUMBER}}
-              -DBESTBUY_API_KEY=${{ secrets.BESTBUY_API_KEY }}
-              -DPOSTGRES_PASSWORD=${{ env.POSTGRESQL_PASSWORD }}
+            -P jib-push-to-dockerhub \
+              -Dapp.image.tag=${{steps.build-number.outputs.BUILD_NUMBER}} \
+              -DBESTBUY_API_KEY=${{ secrets.BESTBUY_API_KEY }} \
+              -DPOSTGRES_PASSWORD=${{ env.POSTGRESQL_PASSWORD }} \
               -DEMAIL_PASSWORD=${{ env.EMAIL_PASSWORD }}
       - name: Update and commit app version in docker-compose.yaml
         run: |
