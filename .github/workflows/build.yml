@@ -12,10 +12,6 @@ env:
   POSTGRESQL_USER: postgres
   POSTGRESQL_PASSWORD: ${{ secrets.POSTGRES_PASSWORD }}
   JAVA_VERSION: 1.17
-  EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
-  DB_URL: ${{ secrets.DB_URL }}
-  DB_USERNAME: ${{ secrets.DB_USERNAME }}
-  DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
 
 jobs:
   build:
@@ -37,4 +33,4 @@ jobs:
           java-version: ${{ env.JAVA_VERSION }}
       - name: Maven Clean Package
         run:
-          mvn --no-transfer-progress -D BESTBUY_API_KEY=${{ secrets.BESTBUY_API_KEY }} -D EMAIL_PASSWORD=${{ env.EMAIL_PASSWORD }} -D DB_URL=${{ env.DB_URL }} -D DB_USERNAME=${{ env.DB_USERNAME }} -D DB_PASSWORD=${{ env.DB_PASSWORD }} clean package -P build-frontend
+          mvn --no-transfer-progress -D BESTBUY_API_KEY=${{ secrets.BESTBUY_API_KEY }} -D POSTGRES_PASSWORD=${{ env.POSTGRESQL_PASSWORD }} clean package -P build-frontend
